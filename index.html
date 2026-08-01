@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Fox's Note</title>
+    <title>🦊Fox's Gwitter</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -52,6 +52,26 @@
       }
     </style>
   <script defer src="/static/js/lib-react.a5e448cc.js"></script><script defer src="/static/js/lib-axios.2766e8ee.js"></script><script defer src="/static/js/29.77f42317.js"></script><script defer src="/static/js/index.7c5c6e71.js"></script><link href="/static/css/29.1fbd2e55.css" rel="stylesheet"></head>
+  <script>
+    window.addEventListener('load', function() {
+      if (window.gwitter) {
+        window.gwitter({
+          config: {
+            request: {
+              owner: 'gitfox-enter',
+              repo: 'gitfox-enter.github.io'
+            },
+            app: {
+              onlyShowOwner: true,
+              enableAbout: true,
+              enableEgg: true,
+              enableRepoSwitcher: false
+            }
+          }
+        });
+      }
+    });
+  </script>
     <div id=gwitter></div>
     <a class="github-corner" href="https://github.com/SimonAKing/Gwitter" aria-label="View source on GitHub" target="_blank" rel="noopener noreferrer" >
       <svg width="80" height="80" viewBox="0 0 250 250"
