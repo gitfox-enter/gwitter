@@ -28,6 +28,11 @@
 				max-width: 720px;
 				font-family: 'PingFang SC', Helvetica, 'Microsoft YaHei', Arial, sans-serif;
 			}
+      /* 只保留"关于内容"，隐藏"关于 Gwitter"和"关于订阅" */
+      .collapse > details:first-of-type,
+      .collapse > details:last-of-type {
+        display: none !important;
+      }
       .github-corner:hover .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
       }
@@ -69,6 +74,14 @@
             }
           }
         });
+        /* 自动展开"关于内容"区块 */
+        setTimeout(function() {
+          var details = document.querySelectorAll('.collapse > details');
+          if (details.length > 0) {
+            details[1].setAttribute('open', '');
+            details[1].querySelector('summary')?.click();
+          }
+        }, 500);
       }
     });
   </script>
